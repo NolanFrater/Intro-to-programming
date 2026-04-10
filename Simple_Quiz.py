@@ -10,8 +10,8 @@ Geography_1 =input("What is the capital of South Sudan?\n a) Juba\n b) Malakal\n
 
 tally_score(Geography_1, "a")
 #1
-Geography_2 =input("What is the capital of Scandinavia?\n a) Oslo\n b) Helsinki\n c) Copenhagen\n d) Stockholm\n")
-
+Geography_2 =input("What is the capital of Sweden?\n a) Oslo\n b) Helsinki\n c) Copenhagen\n d) Stockholm\n")
+#initially bad question, but I fixed it by changing the country to Sweden.
 tally_score(Geography_2, "d")
 #2
 Science_1 =input("What type of element is zirconium?\n a) Metal\n b) Non-metal\n c) Metalloid\n d) Noble Gas\n")
