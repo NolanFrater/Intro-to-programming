@@ -13,7 +13,22 @@ def failure(): #I need to figure out how to make this work with every scenario; 
         introduction()
     else:
         print("please enter one of the provided options")
+
+def break_room():
+    print("As you enter the break room, you see that it is empty, with the sole exeption of a box of donuts.")
+    print("You also see a door leading to the armory and an air duct that you could try to climb through.")
+    print("What do you do?")
+
+    print("1. Eat the donuts")
+    print("2. Climb through the air duct")
+    print("3. Enter the armory.")
     
+    choice = input("> ")
+    if choice == "1":
+        print("You decide to eat the donuts.")
+        
+
+
 def excape():#After using the nail file to excape your cell
     print("You enter the main area of the prison, there are no innmates walking around at this time.")
     print("You hear footsteps around the corner, it is one of the prison guards.")
@@ -39,7 +54,10 @@ def excape():#After using the nail file to excape your cell
          failure()
          
     elif choice == "3":
-         
+        print("You see the enterance of the guard break room and decide to run into it to hide")
+        print("The guard passes by without noticing anything wrong.")
+        pass
+        
     elif choice == "4":
          print("As you run at the guard to try to fight them, they immidiatly counter.")
          print("You are slammed into a wall, breaking multiple bones and almost dying.")
