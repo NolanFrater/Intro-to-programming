@@ -61,7 +61,33 @@ def princessless():#You ignored Princess and ate lunch #5 ending #1
         print("please enter a valid input next time.")
         princessless()
 
+def basement_monster():
+    print("")
 
+def basement(): #After interacting with donuts in break room #6
+    print("You slide down the laundry chute into the basement of the prison.")
+    print("It is extremely dark, making your vision extremely limited.")
+    print("You didn't even know the prison had a basement.")
+    print("You begin to hear noises coming from somewhere in the darkness, what do you do?")
+
+    print("1. approach the noises")
+    print("2. run as fast as you can away from the noises.")
+
+    choice = input("> ")
+    if choice == "1":
+        print("You cautiously go to investigate the noises.")
+        print("As you get closer, you see that it was just a really old washing machine, which is a lot less scary than you thought it would be.")
+        print("You soon realise that your relief was short-lived as the washing machine begins to transform into some angry mess of wires.")
+        basement_monster()
+
+    elif choice == "2":
+        print("You don't like the sound of the noises, so you run as far away as you can.")
+        print("While running, you end up tripping on a pile of laundry which leads to you hitting your head on something hard.")
+        print("You died.")
+        failure()
+    else:
+        print("You should know to enter either a '1' or a '2', is it really that hard")
+        basement()
 
 
 
