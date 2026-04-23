@@ -14,7 +14,59 @@ def failure(): #I need to figure out how to make this work with every scenario; 
     else:
         print("please enter one of the provided options")
 
-def break_room():
+def princessless():#You ignored Princess and ate lunch #5 ending #1
+    print("As you eat your lunch and continue to ignore Princess, you feel as if most of the prison is watching you.")
+    print("You are now considered the most evil person in this prison, why would you make Princess sad?")
+    print("Because you are now considered the most evil person, you are called to the prison warden's office")
+    print("You cannot refuse a request by the prison warden, they hold the highest amount of power within the prison.")
+    print("As you enter the warden's office, you see a stack of papers with your name on them.")
+    print("The warden says, 'You have been moved to a higher security cell because of how needlessly evil you are'")
+    print("How do you respond?")
+
+    print("1. fight the warden")
+    print("2. run")
+    print("3. take his chair hostage")
+
+    choice == input("> ")
+
+    if choice == "1":
+        print("You challenge the warden to a duel")
+        print("The warden, fully confident that he will win, accepts.")
+        print("As you get ready to fight him, you see him drink something.")
+        chances = random.randint(1, 10)
+
+        if chances >= 2:
+            print("The warden attacks before you can even react, killing you instantly.")
+            failure()
+        else:
+            print("Before you can even react, the warden goes to attack you but trips.")
+            print("This leaves you with an opening that you cannot pass up.")
+            print("You kill the warden, making you the new ruler of this prison.")
+            print("You rule the prison with an iron fist, cementing yourself as one of the most evil wardens this prison has seen.")
+            print("Congradulations, you completed one of the endings.")
+    
+    elif choice == "2":
+        print("You try to run from the wardens office, but you forgot about the guards blocking the enerance.")
+        print("The guards quickly stop and detain you, leaving you to be sent to the high security cell.")
+        print("You don't have any chance to excape the new cell, you might as well be dead.")
+        failure()
+    
+    elif choice == "3":
+        print("You grab the decorative chair in the corner of the room and hold it hostage.")
+        print("The warden panics and call all the guards over to the office on a 'code red' emergency.")
+        print("You are quickly killed, with the chair unharmed, by the waves of guards pouring into the office.")
+        failure()
+
+    else:
+        print("please enter a valid input next time.")
+        princessless()
+
+
+
+
+
+
+def break_room():# After running into the guard break room #4
     print("As you enter the break room, you see that it is empty, with the sole exeption of a box of donuts.")
     print("You also see a door leading to the armory and an air duct that you could try to climb through.")
     print("What do you do?")
@@ -26,10 +78,33 @@ def break_room():
     choice = input("> ")
     if choice == "1":
         print("You decide to eat the donuts.")
+        print("As you move the box that the donuts are in, you find that it was covering the laundry chute.")
+        print("You hear the bell marking the start of lunch, and a break for the guards.")
+        print("You jump down the laundry chute in a panic to aviod getting caught.")
+        pass
+
+    elif choice == "2":
+        print("You jump into the air duct.")
+        print("As you crawl through the vents, you begin to hear a creaking noise from below you.")
+        print("The air duct was not made to be able to handle the weight of a human crawling through it, so it collapses.")
+        print("You fall out of the air duct right into the convieniently placed lava moat.")
+        print("You died.")
+        failure()
+
+    elif choice == "3":
+        print("You decide to run into the armory.")
+        print("While looking around the armory you find a large red button with a warning saying DO NOT TOUCH.")
+        print("You take the obvious action and press the button as soon as you see it.")
+        print("The prison explodes, you died.")
+        failure()
+    
+    else:
+        print("Is it really that hard to type a 1, 2, or 3, please stick to valid inputs next time.")
+        break_room()
         
 
 
-def excape():#After using the nail file to excape your cell
+def excape():#After using the nail file to excape your cell #3
     print("You enter the main area of the prison, there are no innmates walking around at this time.")
     print("You hear footsteps around the corner, it is one of the prison guards.")
     print("How do you deal with the prison guard?")
@@ -56,7 +131,7 @@ def excape():#After using the nail file to excape your cell
     elif choice == "3":
         print("You see the enterance of the guard break room and decide to run into it to hide")
         print("The guard passes by without noticing anything wrong.")
-        pass
+        break_room()
         
     elif choice == "4":
          print("As you run at the guard to try to fight them, they immidiatly counter.")
@@ -71,12 +146,7 @@ def excape():#After using the nail file to excape your cell
 
 
 
-
-
-
-
-
-def give_Princess():#not an additional scenario, part of the Princess scenario.
+def give_Princess():#not an additional scenario, part of the Princess scenario. #2.5
     print("What do you give him?")
     print("1. meth")
     print("2. a roll of toilet paper")
@@ -104,7 +174,7 @@ def give_Princess():#not an additional scenario, part of the Princess scenario.
             give_Princess()
 
 
-def Princess(): #after waiting for lunch in introduction
+def Princess(): #after waiting for lunch in introduction #2
     print("As you walk into the cafeteria you hear a voice shout out your name,")
     print("'Hey John, do you have the thing I asked for.' You see a large figure heading your way,")
     print("It is Princess, the only person in this prison that is considered more evil than you.")
@@ -127,7 +197,7 @@ def Princess(): #after waiting for lunch in introduction
 
 
 
-def introduction():
+def introduction():#first encounter #1
     print("This is you, John Weke, and you are a well known petty criminal.")
     print("You find yourself in this cell because you stole one too many lolipops from the local babies.")
     print("You can hear one of the guards approaching your cell.")
