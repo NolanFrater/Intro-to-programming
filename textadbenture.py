@@ -14,6 +14,7 @@ def failure(): #I need to figure out how to make this work with every scenario; 
     else:
         print("please enter one of the provided options")
 
+
 def princessless():#You ignored Princess and ate lunch #5 ending #1
     print("As you eat your lunch and continue to ignore Princess, you feel as if most of the prison is watching you.")
     print("You are now considered the most evil person in this prison, why would you make Princess sad?")
@@ -62,7 +63,28 @@ def princessless():#You ignored Princess and ate lunch #5 ending #1
         princessless()
 
 def basement_monster():
-    print("")
+    print("The creature that used to be a washing machine grabs onto you and drags you to a corner of the basement")
+    print("You are thrown into a hole in the wall by the washing machine creature, and find yourself in another room.")
+    print("Bright lights turn on and you find yourself on a stage of a gameshow.")
+    print("You hear an energetic voice shout out,'Welcome to Prison Pardons, the only place where, if you win, you get out of jail!'")
+    print("You very confused.")
+    print("The voice continues speaking, 'You can choose any game you want to play, but if you lose you will die.'")
+    print("What game should you play?")
+    
+    print("1. Blackjack")
+    print("2. roulette")
+    print("3. Monopoly")
+    print("4. go fish")
+    print("5. do nothing")
+    
+    choice = input("> ")
+    if choice == "1"
+        print("You decide to play some blackjack")
+        print("You seem to start off strong, but you end up on a losing streak pretty quickly.")
+        print("The last thing you hear before you die is the gameshow announcer saying some cheesy line like,'The house always wins.'")
+        failure()
+    elif choice == "2"
+        print("You
 
 def basement(): #After interacting with donuts in break room #6
     print("You slide down the laundry chute into the basement of the prison.")
