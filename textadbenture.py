@@ -78,13 +78,15 @@ def basement_monster():
     print("5. do nothing")
     
     choice = input("> ")
-    if choice == "1"
+    if choice == "1":
         print("You decide to play some blackjack")
         print("You seem to start off strong, but you end up on a losing streak pretty quickly.")
         print("The last thing you hear before you die is the gameshow announcer saying some cheesy line like,'The house always wins.'")
         failure()
-    elif choice == "2"
-        print("You
+    elif choice == "2":
+        print("You decide to play a game of roulette")
+        winrate = random.randint(1, 20)
+        
 
 def basement(): #After interacting with donuts in break room #6
     print("You slide down the laundry chute into the basement of the prison.")
