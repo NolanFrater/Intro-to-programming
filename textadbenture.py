@@ -1,21 +1,127 @@
 import random
+direction = 0
 
-def failure(): #I need to figure out how to make this work with every scenario; play the function it's in when 1 is pressed.
-    print("that was not the correct option, do you want to try this scenario again or restart the story?")
-    print("1, restart scenario")
+
+def happy_princess(): #After giving Princess the toilet paper #10
+    print("")
+
+
+def mineshaft(): #After crawling through the hole in the wall in the mushroom scenario #9 ending #3
+    def failure():
+        direction = 0
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            mineshaft()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+            failure()
+
+    if direction >= 3:
+        print("You finnally find an exit to the mineshaft, and you are able to escape the prison.")
+        print("Congradulations, you completed one of the endings.")
+    
+    elif direction <= -3:
+        print("You get so lost in the mineshaft that you eventually die from starvation and dehydration.")
+        print("You died.")
+        failure()
+
+    else:
+        print("The mineshaft has tunnels leading in every direction, and you have no idea which one to take.")
+        print("What do you do?")
+
+        print("1. take the left tunnel")
+        print("2. take the middle tunnel")
+        print("3. take the right tunnel")
+
+        choice = input("> ")
+
+        if choice == "1":
+            print("You take the left tunnel, and find yourself at another crossroads, with tunnels leading in every direction.")
+            print("You still have no idea on which tunnel to take.")
+            direction -= 1
+            mineshaft()
+    
+        elif choice == "2":
+            print("You take the middle tunnel, and find yourself at another crossroads, with tunnels leading in every direction.")
+            print("You still have no idea on which tunnel to take.")
+            direction += 1
+            mineshaft()
+    
+        elif choice == "3":
+            print("You take the right tunnel, and find yourself at another crossroads, with tunnels leading in every direction.")
+            print("You still have no idea on which tunnel to take.")
+            direction -= 1
+            mineshaft()
+    
+        else:
+            print("please enter one of the provided options")
+            mineshaft()
+
+
+def mushroom(): #After ignoring game show host #8
+    direction = 0
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            mushroom()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+    print("As you come to your senses, you find yourself in a small room with a single purple mushroom in the middle of it.")
+    print("The mushroom is emitting a strange glow, and you can feel a strange energy coming from it.")
+    print("You have a strong urge to eat the mushroom, but you also feel like it could be dangerous.")
+    print("What do you do?")
+
+    print("1. eat the mushroom")
+    print("2. leave the mushroom alone and try to find another way out of the room")
+
+    choice = input("> ")
+
+    if choice == "1":
+        print("You decide to eat the mushroom, and it tastes terrible, like a mix of dirt and rotten fruit.")
+        print("As you swallow the mushroom, you start to feel a strange sensation in your body.")
+        print("You start to see things that aren't there, and you feel like you are losing control of your body.")
+        print("You start to hallucinate.")
+        print("You fully believe that you are free from the prison, and you lay down in the middle of the room, taking in your new found freedom.")
+        failure()
+    
+    elif choice == "2":
+        print("You decide to leave the mushroom alone, and you start to look around the room for another way out.")
+        print("You find a small hole in the wall, and you decide to crawl through it.")
+        print("As you crawl through the hole, you find yourself in some sort of dimly lit mineshaft, with tunnels leading in every direction.")
+        mineshaft()
+
+
+def princessless():#You ignored Princess and ate lunch #5 ending #1
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
     print("2. restart story")
 
     choice = input("> ")
 
     if choice == "1":
-        pass
+        princessless()
     elif choice == "2":
         introduction()
     else:
         print("please enter one of the provided options")
 
 
-def princessless():#You ignored Princess and ate lunch #5 ending #1
     print("As you eat your lunch and continue to ignore Princess, you feel as if most of the prison is watching you.")
     print("You are now considered the most evil person in this prison, why would you make Princess sad?")
     print("Because you are now considered the most evil person, you are called to the prison warden's office")
@@ -28,7 +134,7 @@ def princessless():#You ignored Princess and ate lunch #5 ending #1
     print("2. run")
     print("3. take his chair hostage")
 
-    choice == input("> ")
+    choice = input("> ")
 
     if choice == "1":
         print("You challenge the warden to a duel")
@@ -62,7 +168,22 @@ def princessless():#You ignored Princess and ate lunch #5 ending #1
         print("please enter a valid input next time.")
         princessless()
 
-def basement_monster():
+
+def basement_monster(): #After approaching the noises in the basement #7 ending #2
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            basement_monster()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
     print("The creature that used to be a washing machine grabs onto you and drags you to a corner of the basement")
     print("You are thrown into a hole in the wall by the washing machine creature, and find yourself in another room.")
     print("Bright lights turn on and you find yourself on a stage of a gameshow.")
@@ -78,17 +199,73 @@ def basement_monster():
     print("5. do nothing")
     
     choice = input("> ")
+
     if choice == "1":
         print("You decide to play some blackjack")
         print("You seem to start off strong, but you end up on a losing streak pretty quickly.")
         print("The last thing you hear before you die is the gameshow announcer saying some cheesy line like,'The house always wins.'")
         failure()
+
     elif choice == "2":
         print("You decide to play a game of roulette")
         winrate = random.randint(1, 20)
+
+        if winrate >= 2:
+            print("You start off with a small win, but you end up losing all of your winnings and more pretty quickly.")
+            print("The last thing you hear before you die is the gameshow announcer saying some cheesy line like,'Better luck next time.'")
+            failure()
+
+        else:
+            print("You win the game of roulette, even with all the odds agianst you.")
+            print("The gameshow announcer seems surprised as you black out at the table.")
+            print("You wake up in a random forest, with no memory of how you got there.")
+            print("You are now free, but you have no idea where you are or how to get back to civilization.")
+            print("Congradulations, you completed one of the endings.")
+
+    elif choice == "3":
+        print("You decide to play a game of monopoly")
+        print("You should've known better, the announcer was involved in the creation of the game, so of course you are going to lose.")
+        print("You see a shadow below you, and as you look up you see that a house is falling on you.")
+        print("You are crushed by the house.")
+        print("You died.")
+        failure()
+
+    elif choice == "4":
+        print("You decide to play a game of go fish")
+        print("The announcer seems surprised that you chose such a simple game, but he accepts.")
+        print("This is a game you are familiar with, giving you a lot of confidence going into the game.")
+        print("The announcer can't seem to understand how you are winning, and starts to get very angry, making him even easier to read.")
+        print("You win the game of go fish, and the announcer seems angry.")
+        print("You mysteriously black out at the table, and wake up in a random forest, with no memory of how you got there.")
+        print("You are now free, but you have no idea where you are or how to get back to civilization.")
+        print("Congradulations, you completed one of the endings.")
+
+    elif choice == "5":
+       print("You decide to do nothing, hoping that the gameshow announcer will get bored and let you go.")
+       print("The announcer seems to be dissapointed in your choice, but he accepts it, saying that he wont force you to play a game if you don't want to.")
+       print("A hole opens up in the floor, and you fall through it, landing in a new room.")
+       mushroom()
+
+    else:
+        print("please enter one of the provided options")
+        basement_monster()
         
 
 def basement(): #After interacting with donuts in break room #6
+    def failure(): #I need to figure out how to make this work with every scenario; play the function it's in when 1 is pressed.
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            basement()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+    
     print("You slide down the laundry chute into the basement of the prison.")
     print("It is extremely dark, making your vision extremely limited.")
     print("You didn't even know the prison had a basement.")
@@ -114,9 +291,22 @@ def basement(): #After interacting with donuts in break room #6
         basement()
 
 
-
-
 def break_room():# After running into the guard break room #4
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            break_room()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
     print("As you enter the break room, you see that it is empty, with the sole exeption of a box of donuts.")
     print("You also see a door leading to the armory and an air duct that you could try to climb through.")
     print("What do you do?")
@@ -131,7 +321,7 @@ def break_room():# After running into the guard break room #4
         print("As you move the box that the donuts are in, you find that it was covering the laundry chute.")
         print("You hear the bell marking the start of lunch, and a break for the guards.")
         print("You jump down the laundry chute in a panic to aviod getting caught.")
-        pass
+        basement()
 
     elif choice == "2":
         print("You jump into the air duct.")
@@ -153,8 +343,22 @@ def break_room():# After running into the guard break room #4
         break_room()
         
 
-
 def excape():#After using the nail file to excape your cell #3
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            excape()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
     print("You enter the main area of the prison, there are no innmates walking around at this time.")
     print("You hear footsteps around the corner, it is one of the prison guards.")
     print("How do you deal with the prison guard?")
@@ -195,8 +399,22 @@ def excape():#After using the nail file to excape your cell #3
          excape()
 
 
-
 def give_Princess():#not an additional scenario, part of the Princess scenario. #2.5
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            give_Princess()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
     print("What do you give him?")
     print("1. meth")
     print("2. a roll of toilet paper")
@@ -225,6 +443,21 @@ def give_Princess():#not an additional scenario, part of the Princess scenario. 
 
 
 def Princess(): #after waiting for lunch in introduction #2
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            Princess()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
     print("As you walk into the cafeteria you hear a voice shout out your name,")
     print("'Hey John, do you have the thing I asked for.' You see a large figure heading your way,")
     print("It is Princess, the only person in this prison that is considered more evil than you.")
@@ -242,12 +475,25 @@ def Princess(): #after waiting for lunch in introduction #2
     elif choice == "2":
          print("Princess seems a little let down, but remains calm because of the therapy he has been taking every Thursday.")
          print("You grab your lunch, its the same slop as normal, and you are avoided by the any other innmates because of the crimes you committed.")
-         pass
+         princessless()
        
 
-
-
 def introduction():#first encounter #1
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            introduction()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
     print("This is you, John Weke, and you are a well known petty criminal.")
     print("You find yourself in this cell because you stole one too many lolipops from the local babies.")
     print("You can hear one of the guards approaching your cell.")
@@ -295,6 +541,4 @@ def introduction():#first encounter #1
         introduction()
 
 
-
-
-introduction()
+mineshaft()
