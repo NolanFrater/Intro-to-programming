@@ -1,14 +1,12 @@
-import random
+import random #This is still unfinshed.
 direction = 0
 
 
-def happy_princess(): #After giving Princess the toilet paper #10
-    print("")
 
 
-def mineshaft(): #After crawling through the hole in the wall in the mushroom scenario #9 ending #3
+
+def invisible(): #After taking the invisibility pills in the hospital #14
     def failure():
-        direction = 0
         print("that was not the correct option, do you want to try this scenario again or restart the story?")
         print("1, restart scenario")
         print("2. restart story")
@@ -16,6 +14,263 @@ def mineshaft(): #After crawling through the hole in the wall in the mushroom sc
         choice = input("> ")
 
         if choice == "1":
+            invisible()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+
+
+    print("As the invisibility pills effect wears off, you find yourself in an unusual cell, with some sort of contraption sitting in the corner.")
+    print("You see that the contraption has the toilet paper that you gave to Princess, making you believe that you somehow wandered into Princess' cell.")
+    print("Princess is not in the cell at the moment, but you don't know what his reaction will be when he finds out that you are in his cell.")
+    print("What do you do?")
+
+    print("1. leave the cell")
+    print("2. stay in the cell and wait for Princess to come back")
+    print("3. mess with the contraption")
+
+    choice = input("> ")
+
+    if choice == "1":
+        print("You decide to leave the cell.")
+        print("As you leave, you are immediately caught by a guard, who detains you and has you sent to solitary confinement.")
+        failure()
+    
+    elif choice == "2":
+        print("You decide to stay in the cell and wait for Princess to come back.")
+        print("As you wait, you decide to look through some of the nearby furniture, avoiding the contraption.")
+        a_number = random.randint(1, 10)
+
+        if a_number >= 5:
+            print("You find a mysterious symbol underneath the bed, likely linking Princess to some unkown organization.")
+            print("Princess comes into his cell and finds you messing with his things, he looks a little surprised that you found the symbol.")
+            print("Princess calls for backup and a frog suddenly appears next to you.")
+            print("The frog jumps onto you.")
+            print("The frog happened to be a poison dart frog, and you die from its poison.")
+            failure()
+
+        else:
+            print("You rummage around Princess' things, but arn't able to find anything of interest.")
+            print("Princess comes into his cell and finds you messing with his things, he looks worried, with the idea that you might've found something.")
+            print("Princess calls for backup and a frog suddenly appears next to you.")
+            print("The frog jumps onto you.")
+            print("The frog happened to be a poison dart frog, and you die from its poison.")
+            failure()
+        
+    elif choice == "3":
+        print("You decide to mess with the contraption in the corner of the cell")
+        print("You find a note on it that says, 'Out of commission'")
+        pass
+
+    else:
+        print("Please enter one of the provided inputs.")
+        invisible()
+        
+
+def frog_man(): #After pressing the big blue button in the hospital #13
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            frog_man()
+
+        elif choice == "2":
+            introduction()
+
+        else:
+            print("please enter one of the provided options")
+            failure()
+
+    print("You find yourself on a bed of wet moss, with a small frog sitting on your chest.")
+    print("The frog drops a small piece of paper on your chest, and then hops away.")
+    print("You read the piece of paper, and it says,")
+    print("\n We know that your goal is to escape the prison, it's our goal too, so we want to work with you.")
+    print("If you decide to work against us, we will make sure that you never escape this prison and that you will never feel the warmth of hope again.")
+    print("If you decide to work with us, we will give you orders that you must follow, and if you follow them correctly, we will all excape.")
+    print("\n What do you do?")
+
+    print("1. work with the mysterious organization.")
+    print("2. rat out the mysterious organization to the guards.")
+
+    choice = input("> ")
+
+    if choice == "1":
+        print("You decide to work with this mysterious organization for now.")
+        print("As you are wondering how to contact them, you find a frog themed kids walkie talkie on the ground.")
+        print("You pick up the walkie talkie, and you hear a voice ask you, 'Are you working with us?'")
+        print("You respond with a simple 'yes', and the voice on the walkie talkie seems to be satisfied with your answer.")
+        pass
+
+    elif choice == "2":
+        print("You decide to rat out the mysterious organization to the guards, and you tell them everything you know about it.")
+        print("The guards attempt to investigate the situation, but the room you were in has suddenly become completely empty, with no signs of the mysterious organization anywhere.")
+        print("You are sent back to your cell, and you go throughout the rest of your day like normal.")
+        print("The next day, you wake up to find a note on the ceiling of your cell that says, 'Sniches get stitches,'")
+        print("You also find that this isn't your cell, it is one of the highest security cells in the prison, leaving you with no chance of escape.")
+        failure()
+
+    else:
+        print("please enter one of the provided options, this is an important choice.")
+        frog_man()
+
+
+def map_of_Joe(): #After stealing the map from peg-leg Joe #12
+    print("You take a look at the map you stole from peg-leg Joe, and it seems to be a map of the prison, with a lot of different rooms and areas marked on it.")
+    print("You don't know why rooms on the map are marked, but there is one room marked near the yard, and another near the cafeteria that you could check out.")
+    print("What do you want to do?")
+
+    print("1. check out the room near the yard")
+    print("2. check out the room near the cafeteria")
+
+    choice = input("> ")
+    if choice == "1":
+        print("You decide to look for the room near the yard, but it isn't easily found.")
+        print("After a few minutes of searching, you find a small door hidden underneath the stairs.")
+        pass
+
+    elif choice == "2":
+        print("You decide to look for the room near the cafeteria, and it is relatively easy to find.")
+        print("The only problem is that the area is heavily monitored by guards, so you have to be very careful to not get caught.")
+        pass
+
+    else:
+        print("please enter one of the provided options")
+        map_of_Joe()
+
+
+def hospital(): #After licking the frog #11
+    def failure():
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            hospital()
+        elif choice == "2":
+            introduction()
+        else:
+            print("please enter one of the provided options")
+            failure()
+
+
+    print("You wake up in a hospital bed, with no idea how long you have been unconscious for.")
+    print("A nurse walks into the room and says, 'It's nice to finally see you awake, you were out for a good three hours.'")
+    print("The nurse continues, 'We are required to ask you to fill out a survey on what happened to you, but nobody really cares about what it says,'")
+    print("The nurse hands you a piece of paper and a pen as they leave the room.")
+    print("You can also see objects like a big blue button, a box that is labeled as 'invisibility pills', and a bottle of skooma in the room with you.")
+
+    print("What do you do?")
+    print("1. fill out the survey")
+    print("2. press the big blue button")
+    print("3. take the invisibility pills")
+    print("4. drink the skooma")
+
+    choice = input("> ")
+
+    if choice == "1":
+        print("You decide to fill out the survey, but it feels like it gets longer and longer the more you fill it out.")
+        print("The paper seems to grow in size as you write on it, and you start to feel like you are writing for an eternity.")
+        print("You decide that the survey is not worth your time, and you throw it in the trash.")
+        print("A different nurse seems to barge into the room, and is furious because you threw out the survey.")
+        print("The nurse tells everyone they can find that you are evil and that you should be put in solitary confinement for the rest of your life.")
+        print("This rumor gets to the prison warden, and you are sent to solitary confinement as soon as you are let out of the hospital.")
+        print("You are now in solitary confinement, and you will never be able to escape.")
+        failure()
+    
+    elif choice == "2":
+        print("You decide to press the big blue button, and a unknown force grabs you and drags you out of the hospital bed.")
+        print("You are brought to a different room, which smells almost like a swamp.")
+        frog_man()
+
+    elif choice == "3":
+        print("You decide to take the invisibility pills.")
+        print("You watch as your arms and legs start to disappear, and your vision starts to get blurry.")
+        print("You are now invisible, but light cannot reach your eyes, so you are completely blind.")
+        print("You are now invisible and blind, and you have no idea how to get out of the hospital.")
+        invisible()
+
+    elif choice == "4":
+        print("You decide to drink the skooma, and you feel as if you could run a million miles an hour easily.")
+        print("You cannot control your speed as you try to run away from the hospital, causing you to crash into a wall at an extremely high speed.")
+        print("You died.")
+        failure()
+    
+    else:
+        print("please enter one of the provided options")
+        hospital()
+
+
+def happy_princess(): #After giving Princess the toilet paper #10
+    print("You can ask around to see if anyone can do something mildly entertaining.")
+    print("Who do you ask?")
+
+    print("1. ask the nearest guard")
+    print("2. ask peg-leg Joe")
+    print("3. ask the frog man")
+
+    choice = input("> ")
+    if choice == "1":
+        print("You ask the guard to do something entertaining, but they just look at you with a blank stare and walk away.")
+        print("You should go ask someone else.")
+        happy_princess()
+    
+    elif choice == "2":
+        print("You ask Peg-leg Joe to do something entertaining.")
+        print("He seems to be in a good mood, and start to tell you about his time in the air force, where he lost his leg.")
+        print("You start to zone out as he talks, but then you notice that he has some sort of map on his belt.")
+        print("You decide to take the map, and Joe is so engrossed in his story that he doesn't even notice.")
+        map_of_Joe()
+
+    elif choice == "3":
+        print("You ask the wierd person who is always walking around the prison with a frog.")
+        print("Nobody knows how he gets the frogs, as each time the guards take the frogs away, he somehow finds a new one in the morning.")
+        print("The frog man tells you to lick the frog.")
+        print("Do you lick the frog?")
+
+        print("1. yes")
+        print("2. no")
+
+        choice = input("> ")
+
+        if choice == "1":
+            print("You decide to lick the frog, it tasted terrible and made you almost throw up.")
+            print("You start to lose consciousness, as the frog man looks down on you with a smile on his face.")
+            hospital()
+
+        elif choice == "2":
+            print("You decide to not lick the frog, and the frog man looks disappointed.")
+            print("You don't think you will be able to get any more entertainment out of him, so you should probably ask someone else.")
+
+            happy_princess()
+
+        else:
+            print("please enter one of the provided options")
+            happy_princess()
+
+    else:
+        print("please enter one of the provided options")
+        happy_princess()
+
+
+def mineshaft(): #After crawling through the hole in the wall in the mushroom scenario #9 ending #3
+    global direction
+    def failure():
+        global direction
+        print("that was not the correct option, do you want to try this scenario again or restart the story?")
+        print("1, restart scenario")
+        print("2. restart story")
+
+        choice = input("> ")
+
+        if choice == "1":
+            direction = 0
             mineshaft()
         elif choice == "2":
             introduction()
@@ -23,11 +278,11 @@ def mineshaft(): #After crawling through the hole in the wall in the mushroom sc
             print("please enter one of the provided options")
             failure()
 
-    if direction >= 3:
-        print("You finnally find an exit to the mineshaft, and you are able to escape the prison.")
-        print("Congradulations, you completed one of the endings.")
-    
-    elif direction <= -3:
+    if direction == 3:
+        print("You finally find an exit to the mineshaft, and you are able to escape the prison.")
+        print("Congratulations, you completed one of the endings.")
+
+    elif direction == -3:
         print("You get so lost in the mineshaft that you eventually die from starvation and dehydration.")
         print("You died.")
         failure()
@@ -66,7 +321,7 @@ def mineshaft(): #After crawling through the hole in the wall in the mushroom sc
 
 
 def mushroom(): #After ignoring game show host #8
-    direction = 0
+
     def failure():
         print("that was not the correct option, do you want to try this scenario again or restart the story?")
         print("1, restart scenario")
@@ -88,7 +343,6 @@ def mushroom(): #After ignoring game show host #8
 
     print("1. eat the mushroom")
     print("2. leave the mushroom alone and try to find another way out of the room")
-
     choice = input("> ")
 
     if choice == "1":
@@ -430,7 +684,10 @@ def give_Princess():#not an additional scenario, part of the Princess scenario. 
     elif Choice_1 == "2":
             print("'Thanks, I really needed this for a project I was working on.")
             print("you watch as Princess merrilly jaunts away, leaving you unable to guess what the toilet paper is for.")
-            pass
+            print("You go to eat your lunch, it tasted terrible, but you are used to it by now.")
+            print("Now that lunch is over, you are sent to the yard for some fresh air and exercise.")
+            print("You are bored and want something to happen.")
+            happy_princess()
 
     elif Choice_1 == "3":
             print("'What could I use this for, everything is free in the cafeteria?'")
@@ -476,7 +733,11 @@ def Princess(): #after waiting for lunch in introduction #2
          print("Princess seems a little let down, but remains calm because of the therapy he has been taking every Thursday.")
          print("You grab your lunch, its the same slop as normal, and you are avoided by the any other innmates because of the crimes you committed.")
          princessless()
-       
+    
+    else:
+        print("please enter one of the provided options")
+        Princess()
+
 
 def introduction():#first encounter #1
     def failure():
@@ -541,4 +802,5 @@ def introduction():#first encounter #1
         introduction()
 
 
-mineshaft()
+introduction()
+
